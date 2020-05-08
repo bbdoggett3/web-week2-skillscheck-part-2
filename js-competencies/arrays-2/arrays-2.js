@@ -10,6 +10,14 @@
 //addMoreDucks should return the array.
 
 //Code here
+function addMoreDucks(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > 4) {
+            arr[2] = "42 ducks";
+        }
+    }
+    return arr;
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -19,6 +27,22 @@
 //the 3rd element of the array. cutItOut should return the array.
 
 //Code here
+Array.prototype.remove = function(from, to) {
+    var rest = this.slice((to || from) + 1 || this.length);
+    this.length = from < 0 ? this.length + from : from;
+    return this.push.apply(this, rest);
+  };
+
+function cutItOut(arr) {
+    for(let i = 0; i < arr.length; i++) {                                      //WORK IN PROGRESS
+        console.log(arr);
+        if(arr[i] > 4) {
+            console.log(arr[i]);
+            arr.remove(2);
+        }
+    }
+    return arr;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -28,4 +52,11 @@
 //changeName should return the array.
 
 //Code here
-
+function changeName(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === "Tolkn") {
+            arr[i] = "Tolkien";
+        }
+    }
+    return arr;
+}
