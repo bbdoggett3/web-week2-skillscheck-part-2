@@ -11,7 +11,12 @@
   function addNumbers(value){
       var myNumbers = []
       //Code here
-      
+      console.log(value);
+      for(let i = 0; i < value.length; i++) {
+        myNumbers.push(value[i]);
+      }
+      console.log(myNumbers)
+      return myNumbers;
   }
 
 
