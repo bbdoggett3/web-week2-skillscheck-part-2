@@ -10,6 +10,16 @@
 //use the built-in array method .map
   
   //Code here
+  function dragonMapper(arr) {
+    arr.map(function(element) {
+     if(typeof element === "string") {
+       console.log(element)
+      element =`${element}...here be dragons`;
+     }
+     console.log(element)
+     return element;
+    })
+  }
 
 
 
