@@ -11,6 +11,29 @@
 var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 
 //Code here
+// function sunset() {
+    // let newArr = [];
+
+//     for(let i = 0; i < arr.length; i++) {
+//         console.log(arr[i])
+//         newArr.push(arr[i]);
+//         console.log(newArr);
+//     }
+//     if (newArr[0] === 'brown') {
+//         console.log(newArr)
+//         newArr[0] = 'blue';
+//     }
+//     console.log(newArr)
+//     return newArr;
+// }
+// console.log(sunset(sunsetColors)); //Has the correct output, but can't use the arr.length? 
+
+function sunset() {
+    let newArr = sunsetColors;    //got it I needed to study up on difference between pass by value and reference.
+
+    newArr[0] = 'blue';
+    return newArr;
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -22,6 +45,14 @@ var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"]
 
 //Code here
+function sunrise() {
+    let clone = sunriseColors.slice();
+
+    clone.shift();
+    clone.unshift('green');
+    console.log(clone)
+    return clone;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -41,11 +72,11 @@ var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"]
 //                 the copy and the original; a copy made by value will only 
 //                 change the copy's values`
 
-// var refVsVal = `Passing by reference points to the same object in memory;
-//                 pass by value creates a new object in memory with the same 
-//                 values. A change made to a reference copy will change both 
-//                 the copy and the original; a copy made by value will only 
-//                 change the copy's values`
+var refVsVal = `Passing by reference points to the same object in memory;
+                pass by value creates a new object in memory with the same 
+                values. A change made to a reference copy will change both 
+                the copy and the original; a copy made by value will only 
+                change the copy's values`
 
 // var refVsVal = `Passing by reference creates a new array in memory that 
 //                 points to the original array in memory; pass by value creates 
