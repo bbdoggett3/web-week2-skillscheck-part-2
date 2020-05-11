@@ -12,7 +12,9 @@ function addDucks(arr, ind) {
 
   //WRITE YOUR FOR-LOOP HERE
   //For your iterator, declare it with the let keyword, and name it "i"
-  
+  for(let i = 0; i < arr.length; i++) {
+      `${arr[i]}Duck`;
+  }
 
   //DO NOT TOUCH THIS
   return [arr, ind]
